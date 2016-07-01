@@ -1,4 +1,4 @@
-"Simon Says" Piano MVP
+# H1 "Simon Says" Piano MVP
 - a button to start/restart the game
 - a keyboard graphic that will play a specific note when clicked with a mouse (or maybe mapped to the computer keyboard?)
 - the corresponding "piano" key should light up on the screen when a note is played.
