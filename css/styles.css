@@ -1,0 +1,123 @@
+header {
+  display: block;
+  height: 7em;
+}
+
+/* Piano Wrapper */
+#p-wrapper {
+    background:#000;
+    background:-webkit-linear-gradient(-60deg,#000,#333,#000,#666,#333 70%);
+    background:-moz-linear-gradient(-60deg,#000,#333,#000,#666,#333 70%);
+    background:-ms-linear-gradient(-60deg,#000,#333,#000,#666,#333 70%);
+    background:-o-linear-gradient(-60deg,#000,#333,#000,#666,#333 70%);
+    background:linear-gradient(-60deg,#000,#333,#000,#666,#333 70%);
+    width:1200px;
+    text-align: center;
+    margin: 0 auto;
+    position:relative;
+    -webkit-box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    -moz-box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    box-shadow:0 2px 0px #666,0 3px 0px #555,0 4px 0px #444,0 6px 6px #000,inset 0 -1px 1px rgba(255,255,255,0.5),inset 0 -4px 5px #000;
+    border:2px solid #333;
+    -webkit-border-radius:0 0 5px 5px;
+    -moz-border-radius:0 0 5px 5px;
+    border-radius:0 0 5px 5px;
+    -webkit-animation:taufik 2s;
+    -moz-animation:taufik 2s;
+    animation:taufik 2s;
+}
+
+div#piano {
+  display:block;
+  padding: 10px 15px;
+  width:100%;
+  height: 430px;
+  /*border-top:2px solid #222;*/
+}
+
+.white {
+	float: left;
+	width: 115px;
+	height: 420px;
+  background-color: #F4F4F4;
+  border: 1px solid #626262;
+  position: relative;
+	-moz-border-radius: 0 0 15px 15px;
+	border-radius: 0 0 15px 15px;
+	background-image: -webkit-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
+	-webkit-box-shadow: 0 -10px 2px 0px #838383 none, 0 -60px 40px 10px #EEEEEE inset;
+
+	background-image: -moz-linear-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
+	-moz-box-shadow: 0 -10px 2px 0px #838383 inset, 0 -60px 40px 10px #EEEEEE inset;
+
+	background-image: -gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
+	box-shadow: 0 -10px 2px 0px #838383 inset, 0 -60px 40px 10px #EEEEEE inset;
+}
+
+div.white:active,
+div.white.pressed {
+  border: 1px solid #343434;
+	background-image: -webkit-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
+	-webkit-box-shadow: 0 -5px 20px -3px #272927 inset;
+
+	background-image: -moz-linear-gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
+	-moz-box-shadow: 0 -5px 2px 0px #838383 inset,0 -3px 20px -3px #272927 inset;
+
+	background-image: -gradient(center bottom , #FFFFFF 90%, #CCCCCC 100%);
+	box-shadow: 0 -5px 20px -3px #272927 inset;
+}
+
+.black {
+	float: left;
+	width: 72px;
+	height: 310px;
+  background-color: #000000;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  position: absolute;
+  z-index: 100;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	border-top: 0px;
+	-moz-box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
+	-webkit-box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
+	box-shadow: 0 -9px 10px 9px #303030 inset, 0 -15px #F7F7F7 inset;
+}
+
+div.black:active,
+div.black.pressed {
+  border: 1px solid #CECECE;
+  border-top: 1px solid #626262;
+	-moz-box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
+	-webkit-box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
+	box-shadow: 0 0 6px 7px #303030 inset, 0 -5px #F7F7F7 inset;
+}
+
+div.flats {
+
+}
+
+#Cs_1 {
+  margin-left: 74px;
+}
+
+#Ds_1 {
+  margin-left: 202px;
+}
+
+#Fs_1 {
+	margin-left: 424px;
+}
+#Gs_1 {
+	margin-left: 546px;
+}
+#As_1 {
+	margin-left: 668px;
+}
+#Cs_2 {
+	margin-left: 894px;
+}
+#Ds_2 {
+	margin-left: 1019px;
+}
