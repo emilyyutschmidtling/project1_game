@@ -3,6 +3,8 @@ console.log("Document linked!")
 var sequence = [];
 var copy = [];
 
+// Associating sound clips with piano key
+
 $(document).ready(function() {
   $('#C1').on('click', function() {
     console.log("got it");
@@ -74,3 +76,12 @@ $(document).ready(function() {
     toneE2.play();
   });
 });
+
+// computer picks a note randomly
+var pianoNotes = [C1, Cs1, D1, Ds1, E1, F1, Fs1, G1, Gs1, A1, As1, B1, C2, Cs2, D2, Ds2, E2]
+
+function computerChoice() {
+
+}
+
+// computer's choice of note should trigger the active/pressed CSS button styling and tone load/play
