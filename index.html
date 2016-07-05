@@ -4,33 +4,109 @@
   <meta charset="UTF-8">
   <title>Simon Says Piano</title>
   <link rel="stylesheet" href="css/styles.css">
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
   <header>
 
   </header>
 
-  </div>
+  <!-- Keyboard design adapted from:
+          - HTML5 Piano (http://www.html5piano.ilinov.eu/)
+          - Taufik Nurrohman, Pure CSS3 Piano (http://cssdeck.com/labs/full/pure-css3-piano) -->
+
   <div id="p-wrapper">
   	<div id="piano">
-      <div class="white key" id="C_1"></div>
-      <div class="black key" id="Cs_1"></div>
-      <div class="white key" id="D_1"></div>
-      <div class="black key" id="Ds_1"></div>
-      <div class="white key" id="E_1"></div>
-      <div class="white key" id="F_1"></div>
-      <div class="black key" id="Fs_1"></div>
-      <div class="white key" id="G_1"></div>
-      <div class="black key" id="Gs_1"></div>
-      <div class="white key" id="A_1"></div>
-      <div class="black key" id="As_1"></div>
-      <div class="white key" id="B_1"></div>
-      <div class="white key" id="C_2"></div>
-      <div class="black key" id="Cs_2"></div>
-      <div class="white key" id="D_2"></div>
-      <div class="black key" id="Ds_2"></div>
-      <div class="white key" id="E_2"></div>
+      <div class="white key" id="C1"></div>
+      <div class="black key" id="Cs1"></div>
+      <div class="white key" id="D1"></div>
+      <div class="black key" id="Ds1"></div>
+      <div class="white key" id="E1"></div>
+      <div class="white key" id="F1"></div>
+      <div class="black key" id="Fs1"></div>
+      <div class="white key" id="G1"></div>
+      <div class="black key" id="Gs1"></div>
+      <div class="white key" id="A1"></div>
+      <div class="black key" id="As1"></div>
+      <div class="white key" id="B1"></div>
+      <div class="white key" id="C2"></div>
+      <div class="black key" id="Cs2"></div>
+      <div class="white key" id="D2"></div>
+      <div class="black key" id="Ds2"></div>
+      <div class="white key" id="E2"></div>
     </div>
+  </div>
+
+  <!-- AudioFiles Section http://pianosounds.pixelass.com/tones/grand-piano/ -->
+	<div id="pianoStrings">
+		<audio id="toneC1" preload="auto" controls="">
+			<source src="assets/40-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/40-PedalOffForte1Close.ogg" type="audio/ogg">
+		</audio>
+    <audio id="toneCs1" preload="auto" controls="">
+			<source src="assets/41-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/41-PedalOffForte1Close.ogg" type="audio/ogg">
+		</audio>
+    <audio id="toneD1" preload="auto" controls="">
+      <source src="assets/42-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/42-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneDs1" preload="auto" controls="">
+      <source src="assets/43-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/43-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneE1" preload="auto" controls="">
+      <source src="assets/44-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/44-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneF1" preload="auto" controls="">
+      <source src="assets/45-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/45-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneFs1" preload="auto" controls="">
+      <source src="assets/46-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/46-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneG1" preload="auto" controls="">
+      <source src="assets/47-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/47-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneGs1" preload="auto" controls="">
+      <source src="assets/48-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/48-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneA1" preload="auto" controls="">
+      <source src="assets/49-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/49-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneAs1" preload="auto" controls="">
+      <source src="assets/50-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/50-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneB1" preload="auto" controls="">
+      <source src="assets/51-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/51-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneC2" preload="auto" controls="">
+      <source src="assets/52-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/52-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneCs2" preload="auto" controls="">
+      <source src="assets/53-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/53-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneD2" preload="auto" controls="">
+      <source src="assets/54-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/54-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneDs2" preload="auto" controls="">
+      <source src="assets/55-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/55-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
+    <audio id="toneE2" preload="auto" controls="">
+      <source src="assets/56-PedalOffForte1Close.wav" type="audio/wav">
+      <source src="assets/56-PedalOffForte1Close.ogg" type="audio/ogg">
+    </audio>
   </div>
 
   <script src="js/app.js"></script>

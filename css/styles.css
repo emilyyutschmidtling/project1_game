@@ -3,6 +3,10 @@ header {
   height: 7em;
 }
 
+/*Keyboard design adapted from:
+  - HTML5 Piano (http://www.html5piano.ilinov.eu/)
+  - Taufik Nurrohman, Pure CSS3 Piano (http://cssdeck.com/labs/full/pure-css3-piano)*/
+
 /* Piano Wrapper */
 #p-wrapper {
     background:#000;
@@ -98,26 +102,33 @@ div.flats {
 
 }
 
-#Cs_1 {
+#Cs1 {
   margin-left: 74px;
 }
 
-#Ds_1 {
+#Ds1 {
   margin-left: 202px;
 }
 
-#Fs_1 {
+#Fs1 {
 	margin-left: 424px;
 }
-#Gs_1 {
+#Gs1 {
 	margin-left: 546px;
 }
-#As_1 {
+#As1 {
 	margin-left: 668px;
 }
-#Cs_2 {
+#Cs2 {
 	margin-left: 894px;
 }
-#Ds_2 {
+#Ds2 {
 	margin-left: 1019px;
+}
+
+#pianoStrings {
+	position: fixed;
+	bottom: 10px;
+	left: 20px;
+	display: none;
 }
