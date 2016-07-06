@@ -1,8 +1,5 @@
 console.log("Document linked!")
 
-var sequence = [];
-var copy = [];
-
 // Associating sound clips with piano key
 
 $(document).ready(function() {
@@ -78,10 +75,78 @@ $(document).ready(function() {
 });
 
 // computer picks a note randomly
-var pianoNotes = [C1, Cs1, D1, Ds1, E1, F1, Fs1, G1, Gs1, A1, As1, B1, C2, Cs2, D2, Ds2, E2]
+var pianoNotes = $('.key');
 
-function computerChoice() {
-  
+var sequence = [];
+
+
+$('#start').on('click', function() {
+  return randomPlay();
+});
+
+function randomPlay() {
+  var nextNote = pianoNotes[Math.floor(Math.random() * pianoNotes.length)];
+  sequence.push(nextNote);
+  playSequence(sequence);
+
+}
+
+function play() {
+  function playEach() {
+    // currentNote.
+  }
+  for(var i = 0; i < sequence.length; i++) {
+    var currentNote = sequence[i].id;
+    console.log("This note is ", sequence[i].id);
+    setTimeOut(playEach(), 1500);
+  }
+}
+
+function playNote(div) {
+  $(div).addClass('play');
+  $(div).trigger('click');
+  setTimeout(function() {
+    $(div).removeClass('play');
+  }, 500)
+}
+
+function playSequence(arr) {
+  var index = 0;
+  var interval = setInterval(function() {
+    playNote(arr[index]);
+    index++;
+    if(index == arr.length) {
+      clearInterval(interval);
+    }
+  }, 1000);
 }
 
 // computer's choice of note should trigger the active/pressed CSS button styling and tone load/play
+var player = [];
+
+// function getPlayerInput() {
+//   console.log("your turn");
+//   for(var i = 0; i < pianoNotes.length; i++) {
+//     pianoNotes[i].addEventListener('click', function() {
+//       // console.log("i heard you!")
+//       player.push(this);
+//     });
+//   }
+// }
+
+// ON successive turns, this version adds more and more duplicates of the new entry to the player array
+for(var i = 0; i < pianoNotes.length; i++) {
+  pianoNotes[i].addEventListener('click', function() {
+    player.push(this);
+    // if sequence length equals player length
+    //   compare sequence and player
+    //   if they match
+    //     reset player array to empty array
+    //     call random play
+    //   else
+    //     game over
+
+  });
+}
+
+// 
