@@ -4,7 +4,6 @@ console.log("Document linked!")
 
 $(document).ready(function() {
   $('#C1').on('click', function() {
-    console.log("got it");
     toneC1.load();
     toneC1.play();
   });
@@ -87,8 +86,8 @@ $('#start').on('click', function() {
 function randomPlay() {
   var nextNote = pianoNotes[Math.floor(Math.random() * pianoNotes.length)];
   sequence.push(nextNote);
+  console.log("computer: ", sequence);
   playSequence(sequence);
-
 }
 
 function playEach() {
@@ -101,7 +100,7 @@ function playEach() {
 
 function playNote(div) {
   $(div).addClass('play');
-  $(div).trigger('click');
+  $(div).triggerHandler('click');
   setTimeout(function() {
     $(div).removeClass('play');
   }, 500)
@@ -121,41 +120,33 @@ function playSequence(arr) {
 // computer's choice of note should trigger the active/pressed CSS button styling and tone load/play
 var player = [];
 
-function getPlayerInput() {
-  console.log("your turn");
-  for(var i = 0; i < pianoNotes.length; i++) {
-    pianoNotes[i].addEventListener('click', function() {
-      // console.log("i heard you!")
-      player.push(this);
-    });
+for(var i = 0; i < pianoNotes.length; i++) {
+  pianoNotes[i].addEventListener('click', function() {
+    // console.log("i heard you!")
+    player.push(this);
+    evalPlayerInput();
+  });
+}
+
+function evalPlayerInput() {
+  console.log("hi")
+  if(sequence.length === player.length) {
+    if(isSame(sequence, player)) {
+      player = [];
+      randomPlay();
+    }
+    else {
+      alert("Game over - Level: ", sequence.length);
+      player = [];
+    }
   }
 }
 
-getPlayerInput()
-
-// ON successive turns, this version adds more and more duplicates of the new entry to the player array
-// for(var i = 0; i < pianoNotes.length; i++) {
-//   pianoNotes[i].addEventListener('click', function() {
-//     player.push(this);
-//     console.log(sequence.length, player.length);
-//     if(sequence.length === player.length) {
-//       for(var i = 0; i < sequence.length; i++) {
-//         if(sequence[i] !== player[i]) {
-//           alert("Game over! Level: ", sequence.length);
-//         }
-//         else {
-//           player = [];
-//           randomPlay();
-//         }
-//       }
-//     }
-    // if sequence length equals player length
-    //   compare sequence and player
-    //   if they match
-    //     reset player array to empty array
-    //     call random player
-    //   else
-    //     game over
-
-//   });
-// }
+function isSame(arr1, arr2) {
+  for(i = 0; i < arr1.length; i++) {
+    if(arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+}
