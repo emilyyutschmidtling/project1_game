@@ -91,13 +91,10 @@ function randomPlay() {
 
 }
 
-function play() {
-  function playEach() {
-    // currentNote.
-  }
+function playEach() {
   for(var i = 0; i < sequence.length; i++) {
     var currentNote = sequence[i].id;
-    console.log("This note is ", sequence[i].id);
+    // console.log("This note is ", sequence[i].id);
     setTimeOut(playEach(), 1500);
   }
 }
@@ -119,32 +116,46 @@ function playSequence(arr) {
       clearInterval(interval);
     }
   }, 1000);
-
+}
 
 // computer's choice of note should trigger the active/pressed CSS button styling and tone load/play
 var player = [];
 
-// function getPlayerInput() {
-//   console.log("your turn");
-//   for(var i = 0; i < pianoNotes.length; i++) {
-//     pianoNotes[i].addEventListener('click', function() {
-//       // console.log("i heard you!")
-//       player.push(this);
-//     });
-//   }
-// }
+function getPlayerInput() {
+  console.log("your turn");
+  for(var i = 0; i < pianoNotes.length; i++) {
+    pianoNotes[i].addEventListener('click', function() {
+      // console.log("i heard you!")
+      player.push(this);
+    });
+  }
+}
+
+getPlayerInput()
 
 // ON successive turns, this version adds more and more duplicates of the new entry to the player array
-for(var i = 0; i < pianoNotes.length; i++) {
-  pianoNotes[i].addEventListener('click', function() {
-    player.push(this);
+// for(var i = 0; i < pianoNotes.length; i++) {
+//   pianoNotes[i].addEventListener('click', function() {
+//     player.push(this);
+//     console.log(sequence.length, player.length);
+//     if(sequence.length === player.length) {
+//       for(var i = 0; i < sequence.length; i++) {
+//         if(sequence[i] !== player[i]) {
+//           alert("Game over! Level: ", sequence.length);
+//         }
+//         else {
+//           player = [];
+//           randomPlay();
+//         }
+//       }
+//     }
     // if sequence length equals player length
     //   compare sequence and player
     //   if they match
     //     reset player array to empty array
-    //     call random play
+    //     call random player
     //   else
     //     game over
 
-  });
-}
+//   });
+// }
