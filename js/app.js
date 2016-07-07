@@ -119,7 +119,7 @@ function playSequence(arr) {
       clearInterval(interval);
     }
   }, 1000);
-}
+
 
 // computer's choice of note should trigger the active/pressed CSS button styling and tone load/play
 var player = [];
@@ -148,5 +148,3 @@ for(var i = 0; i < pianoNotes.length; i++) {
 
   });
 }
-
-// 
