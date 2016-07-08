@@ -1,5 +1,7 @@
 console.log("Document linked!")
 
+// The piano sounds were taken from Piano in 162, a sample library of a Steinway Model B grand piano performed by Simon Dalzell, an undergraduate at The University of Arizona.
+
 // Associating sound clips with piano key
 
 $(document).ready(function() {
@@ -73,9 +75,9 @@ $(document).ready(function() {
   });
 });
 
-// computer picks a note randomly
 var pianoNotes = $('.key');
 
+// computer picks a note randomly, which is then added to the sequence array
 var sequence = [];
 
 
@@ -90,6 +92,9 @@ function randomPlay() {
   playSequence(sequence);
 }
 
+// Courtesy of Mike Wong and Josh
+// The following code enables the computer to play sound and simulate the appearance of the piano key being pressed.  This is the code the computer uses to play the sequence to be duplicated by the player.  The appearance of the key press is achieved by briefly adding then removing a class tied to a CSS style.  The sound is triggered by basically a "fake" click.
+
 function playEach() {
   for(var i = 0; i < sequence.length; i++) {
     var currentNote = sequence[i].id;
@@ -98,6 +103,7 @@ function playEach() {
   }
 }
 
+// .trigger('click') simulates a click when there isn't really one, but the computer perceives it as an actual click; .triggerHandler('click') does the same thing but the computer doesn't mistake it for an actual click.
 function playNote(div) {
   $(div).addClass('play');
   $(div).triggerHandler('click');
@@ -117,9 +123,9 @@ function playSequence(arr) {
   }, 1000);
 }
 
-// computer's choice of note should trigger the active/pressed CSS button styling and tone load/play
 var player = [];
 
+// This adds event listeners that detect which key is pressed by the player.  Since all this code does is add event listeners to the piano keys and there's no reason to wait to start detection, this code isn't tied to a name and goes into effect immediately without needing to be called.
 for(var i = 0; i < pianoNotes.length; i++) {
   pianoNotes[i].addEventListener('click', function() {
     // console.log("i heard you!")
@@ -129,14 +135,13 @@ for(var i = 0; i < pianoNotes.length; i++) {
 }
 
 function evalPlayerInput() {
-  console.log("hi")
   if(sequence.length === player.length) {
     if(isSame(sequence, player)) {
       player = [];
       randomPlay();
     }
     else {
-      alert("Game over - Level: ", sequence.length);
+      alert("Game over - Congratulations, you have reached Level: " + sequence.length);
       player = [];
     }
   }
