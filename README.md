@@ -5,9 +5,9 @@ Simon Says Piano is a "follow the leader" memory game played on a virtual piano 
 You can play at: https://eyschmidt1ing.github.io/project1_game/
 
 
-**_To Download the Game*_**
+**_To Download the Game_**
 
-# Github Repo:  https://github.com/eyschmidt1ing/project1_game
+Github Repo:  https://github.com/eyschmidt1ing/project1_game
 Simply download the repo using the link above, then open the index.html document in your browser (preferably Chrome).
 
 
