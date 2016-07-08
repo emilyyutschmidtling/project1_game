@@ -22,7 +22,8 @@ Once the virtual piano keyboard was functional, I then turned my attention to ex
 - dressing up the game page to make it look a little nicer and more finished;
 - adding a counter to the screen so players can track progress while they are playing the game;
 - adding functionality to allow players to play the game with random notes or actual melodies;
-- adding a computer keypad option for playing the virtual piano keyboard.
+- adding a computer keypad option for playing the virtual piano keyboard;
+- exploring options for the sound files to improve processing when playing the game online.
 
 My Trello Project Board:  https://trello.com/b/JL8NLGy6/project-1
 
