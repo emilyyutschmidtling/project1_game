@@ -2,12 +2,12 @@
 
 Simon Says Piano is a "follow the leader" memory game played on a virtual piano keyboard. Click "start" to start the game.  Simon's piano will play a note.  If you successfully play back the note on the piano keyboard using your mouse, Simon will add a new note to the sequence for you to duplicate.  How long can you keep up?
 
-You can play at: https://eyschmidt1ing.github.io/project1_game/
+You can play at: https://emilyyutschmidtling.github.io/project1_game/
 
 
 **_To Download the Game_**
 
-Github Repo:  https://github.com/eyschmidt1ing/project1_game
+Github Repo:  https://github.com/emilyyutschmidtling/project1_game
 Simply download the repo using the link above, then open the index.html document in your browser (preferably Chrome).
 
 
@@ -27,6 +27,6 @@ Once the virtual piano keyboard was functional, I then turned my attention to ex
 
 My Trello Project Board:  https://trello.com/b/JL8NLGy6/project-1
 
-![alt text](https://github.com/eyschmidt1ing/project1_game/blob/master/assets/Proj1_Wirewrap2.jpg "Wireframe: Main Page")
+![alt text](https://github.com/emilyyutschmidtling/project1_game/blob/master/assets/Proj1_Wirewrap2.jpg "Wireframe: Main Page")
 
-Many thanks to Mike Wong, Josh, Adrianna Marini, and WDI-SM-24 for their support and assistance in making this work!
+Many thanks to Mike Wong, Josh Fadem, Adrianna Marini, and WDI-SM-24 for their support and assistance in making this work!
